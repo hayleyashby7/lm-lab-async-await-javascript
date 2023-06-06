@@ -18,7 +18,7 @@ const techSupport = async () => {
 
 	const response = await fetchData(totallyLegitTechPhrases);
 
-	return `\nTrust me, I'm an engineer. ${response.message}`;
+	return `\nTrust me, I'm an engineer. ${response.message}.`;
 };
 
 const catFacts = async () => {
@@ -27,7 +27,7 @@ const catFacts = async () => {
 	const catResponse = await fetchData(catInfoService);
 	const catFact = catResponse[Math.floor(Math.random() * catResponse.length)];
 
-	return `\nToday's Cat Fact: ${catFact.text}`;
+	return `\nToday's Cat Fact: ${catFact.text}.`;
 };
 
 console.log(await techSupport());
