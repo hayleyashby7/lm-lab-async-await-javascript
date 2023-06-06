@@ -12,4 +12,16 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // Step 1) Call with then and catch
-promise.then((response) => console.log(`Yay! Promise resolved with response: ${response}`)).catch((error) => console.log(`Boo. Promise rejected with response: ${error}`));
+//promise.then((response) => console.log(`Yay! Promise resolved with response: ${response}`)).catch((error) => console.log(`Boo. Promise rejected with response: ${error}`));
+
+// Step 2) Convert to async/await
+const consumePromise = async () => {
+	try {
+		const response = await promise;
+		console.log(`Yay! Promise resolved with response: ${response}`);
+	} catch (error) {
+		console.log(`Boo. Promise rejected with response: ${error}`);
+	}
+};
+
+consumePromise();
